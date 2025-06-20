@@ -2,7 +2,7 @@ namespace SpriteKind {
     export const Obstacle = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Obstacle, function (sprite, otherSprite) {
-	
+    game.over(false, effects.melt)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.stopAnimation(animation.AnimationTypes.All, bunny)
